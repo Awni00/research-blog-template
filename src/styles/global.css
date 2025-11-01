@@ -1,0 +1,66 @@
+/* Tailwind base + typography utilities */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark {
+  /* Scope styles to the runtime theme selection */
+  &:where([data-theme="dark"] *) {
+    @slot;
+  }
+  &:where([data-theme="device"] *) {
+    @media (prefers-color-scheme: dark) {
+      @slot;
+    }
+  }
+}
+
+/* Ensure code playground fills the content column */
+.expressive-code {
+  width: 100%;
+}
+
+/* Footnote hover preview tooltip */
+.footnote-preview {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 50;
+  max-width: 18rem;
+  padding: 0.75rem 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #27272a;
+  background-color: #f4f4f5;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(0, 0.35rem, 0);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.footnote-preview p {
+  margin: 0;
+}
+
+.footnote-preview p + p {
+  margin-top: 0.5rem;
+}
+
+.footnote-preview a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footnote-preview[data-visible="true"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[data-theme="dark"] .footnote-preview {
+  color: #e4e4e7;
+  background-color: #18181b;
+  border-color: #27272a;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
