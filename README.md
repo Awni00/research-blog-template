@@ -10,7 +10,7 @@
 </div>
 
 
-This repo implements a template for building blog-style webpages for academic research projects. It is designed to be easy to use by using [Astro]("a JavaScript web framework optimized for building fast, content-driven websites"). I.e., you can build your webpage by writing the *content* in markdown, without having to worry so much about HTML/CSS.
+This repo implements a template for building blog-style webpages for academic research projects. It is designed to be easy to use by using [Astro](https://astro.build/) ("a JavaScript web framework optimized for building fast, content-driven websites"). I.e., you can build your webpage by writing the *content* in markdown, without having to worry so much about HTML/CSS.
 
 The original repo is based on [the following project by Roman Hauuksson](https://github.com/RomanHauksson/academic-project-astro-template), which traces back to [this project page by Keunhong Park](https://nerfies.github.io/). As I was using these templates to build my project pages, I ended up implementing some new features for things I wanted to add. This repo serves as my own customized version of the template with some additional features, which I plan to continue using for future projects. I'm making it public as well in case it is helpful to anyone else building academic blogs. Feel free to 
 
